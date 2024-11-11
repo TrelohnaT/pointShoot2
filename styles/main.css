@@ -1,0 +1,14 @@
+html {
+    background-color:#fff8e7;
+
+}
+
+#myCanvas {
+    background-color: lightgray;
+}
+
+
+.hideable {
+    display: none;
+}
+

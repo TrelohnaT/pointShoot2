@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meteors</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body onload="starter()" onmousemove="getMousePosition(event)">
+    <div id="fps_counter"></div>
+
+
+    <div class="hideable">
+        <label for="projectileCounter">Projectiles in game: </label>
+        <span id="projectileCounter"></span>
+
+    </div>
+    <div>
+        <div>
+            <label for="meteorCounter">Meteors in game: </label>
+            <span id="meteorCounter"></span>
+            <input type="range" id="maxMeteorCount" value="10" min="1" max="30">
+        </div>
+        <div>
+            <label for="meteorSpeed">Meteors speed:</label>
+            <span id="meteorSpeed"></span>
+            <input type="range" id="maxMeteorsSpeed" value="1" min="1" max="10">
+        </div>
+    </div>
+
+    <div>
+        <label for="playerScore">Score: </label>
+        <span id="playerScore"></span>
+    </div>
+
+    <div id="playAgainBtn" class="hideable">
+
+        <button onclick="reload()">Play Again</button>
+    </div>
+
+    <canvas id="myCanvas" onclick="mouseClick(event)"></canvas>
+</body>
+
+
+<script type="module">
+    import { starter, startEngine, stopEngine, getMousePosition, mouseClick, reload } from "./js/start_point.js";
+    window.starter = starter;
+    window.startEngine = startEngine;
+    window.stopEngine = stopEngine;
+    window.getMousePosition = getMousePosition;
+    window.mouseClick = mouseClick;
+    window.reload = reload;
+
+</script>
+
+
+</html>
